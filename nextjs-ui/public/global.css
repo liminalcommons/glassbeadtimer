@@ -1,0 +1,66 @@
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+  /* margin: 0; */
+  margin: 0 0 0.5em 0;
+  padding: 0;
+  font-weight: normal;
+  line-height: 1.2;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+html,body { height: 100%; }
+pre {
+  white-space: pre-wrap;
+}
+
+
+h1 {
+    font-size: 2em;
+}
+
+a {
+    color: inherit;
+}
+
+/*********/
+
+:root {
+  --bg-color: #330202;
+  /* --bg-color: white; */
+  /* --fg-color: #484848; */
+  --fg-color: #fcffe9;
+  --bg-highlight: #1c0303;
+  /* --bg-highlight: #ccc; */
+
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--fg-color);
+
+  /* margin-top: 1em;
+  margin-bottom: 3em; */
+
+  /* padding: 1em; */
+  padding: 1em 0;
+  margin: 0;
+  line-height: 1.4;
+}
+

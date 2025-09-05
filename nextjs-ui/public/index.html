@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset='utf-8'>
+	<meta name='viewport' content='width=device-width,initial-scale=1'>
+
+	<title>Glass bead timer</title>
+
+	<link rel='icon' type='image/png' href='/favicon.png'>
+	<link rel='stylesheet' href='/global.css'>
+	<!-- <link rel='stylesheet' href='/build/bundle.css'> -->
+
+    <!-- <script defer src='/build/bundle.js'></script> -->
+    
+    <style>
+
+body {
+    min-height: 100vh;
+    margin: 0 2em;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+#container > * {
+    text-align: center;
+    /* display: inline-block; */
+    min-height: 10em;
+    border: 2px solid var(--fg-color);
+    margin: 20px;
+    /* width: 30%; */
+    min-width: 200px;
+    max-width: 30%;
+    padding: 1em;
+    line-height: 1.5;
+    /* justify-content: center; */
+}
+
+input {
+    display: inline-block;
+    margin: 5px 0;
+    border: 2px solid #cecece;
+    font-size: 100%;
+    width: 100%;
+    max-width: 200px;
+}
+
+button {
+    font-size: 120%;
+}
+
+#host {
+}
+
+#join {
+}
+
+#github {
+    /* position: sticky; */
+    /* bottom: 0; */
+    margin-top: 7em;
+}
+    </style>
+</head>
+
+<body>
+    <h1>
+        Seph's Glass bead games timer
+    </h1>
+
+    <h2>
+        For playing <a href=https://glassbeadgames.com/>The Glass Bead Game</a>
+    </h2>
+
+    <script>
+        function go_to_room(e) {
+            const room = document.getElementById('room').value.trim()
+            if (room !== '') {
+                window.location.href = `rooms/${room}`
+            }
+            return false
+        }
+    </script>
+
+    <div id=container>
+        <a id=host href="rooms/_random">Host a new room</a>
+
+        <!-- This page should probably also be a svelte app, but I'm too lazy to set it up. -->
+        <form id=join onsubmit="return go_to_room()">
+            <label>
+                Join room by name:
+                <input type=text id=room name=room>
+            </label>
+            <button>Go</button>
+            <div style="margin-top: 0.5em;">Room will be created if it does not exist</div>
+        </form>
+    </div>
+    
+    <div id=github>
+        This timer is maintained as a gift to the community. Contribute in turn by submitting issues and bug fixes <a href='https://github.com/josephg/glassbeadtimer'>on Github</a>
+    </div>
+</body>
+</html>

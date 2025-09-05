@@ -1,0 +1,137 @@
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+  /* margin: 0; */
+  margin: 0 0 0.5em 0;
+  padding: 0;
+  font-weight: normal;
+  line-height: 1.2;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+html,body { height: 100%; }
+pre {
+  white-space: pre-wrap;
+}
+
+
+h1 {
+    font-size: 2em;
+}
+
+a {
+    color: inherit;
+}
+
+/*********/
+
+:root {
+  --bg-color: #330202;
+  --fg-color: #fcffe9;
+  --bg-highlight: #1c0303;
+  --svg-fill: var(--fg-color);
+  --input-border: #cecece;
+  --button-bg: transparent;
+  --accent-color: #4CAF50;
+  --accent-bg: #e8f5e8;
+  --secondary-accent: #2196F3;
+  --disabled-bg: #ccc;
+  --card-border: #ddd;
+  --card-bg: #fff;
+}
+
+.light-theme {
+  --bg-color: #ffffff;
+  --fg-color: #333333;
+  --bg-highlight: #f0f0f0;
+  --svg-fill: var(--fg-color);
+  --input-border: #cccccc;
+  --button-bg: #e0e0e0;
+  --accent-color: #4CAF50;
+  --accent-bg: #e8f5e8;
+  --secondary-accent: #2196F3;
+  --disabled-bg: #ccc;
+  --card-border: #ddd;
+  --card-bg: var(--bg-color);
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--fg-color);
+  margin: 0;
+  padding: 0;
+  line-height: 1.4;
+  min-height: 100vh;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+#container > * {
+    text-align: center;
+    /* display: inline-block; */
+    min-height: 10em;
+    border: 2px solid var(--fg-color);
+    margin: 20px;
+    /* width: 30%; */
+    min-width: 200px;
+    max-width: 30%;
+    padding: 1em;
+    line-height: 1.5;
+    /* justify-content: center; */
+}
+
+input {
+    display: inline-block;
+    margin: 5px 0;
+    border: 2px solid var(--input-border);
+    font-size: 100%;
+    width: 100%;
+    max-width: 200px;
+    background-color: var(--bg-color);
+    color: var(--fg-color);
+}
+
+button {
+    font-size: 120%;
+}
+
+#host {
+}
+
+#join {
+}
+
+#github {
+    /* position: sticky; */
+    /* bottom: 0; */
+    margin-top: 7em;
+}
+
+svg {
+    fill: var(--svg-fill);
+}
+
+button {
+    background-color: var(--button-bg);
+    border: 1px solid var(--fg-color);
+    color: var(--fg-color);
+}
